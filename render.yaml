@@ -1,0 +1,31 @@
+services:
+  - type: web
+    name: unfazed-api
+    runtime: node
+    rootDir: unfazed-backend
+    buildCommand: npm ci
+    startCommand: npm start
+    healthCheckPath: /api/health
+    envVars:
+      - key: PORT
+        value: 10000
+      - key: MONGO_URI
+        sync: false
+      - key: JWT_SECRET
+        sync: false
+      - key: RAZORPAY_KEY_ID
+        sync: false
+      - key: RAZORPAY_KEY_SECRET
+        sync: false
+      - key: RAZORPAY_WEBHOOK_SECRET
+        sync: false
+      - key: CORS_ORIGIN
+        sync: false
+      - key: PLATFORM_FEE_RATE
+        value: "0.05"
+      - key: INVOICE_TAX_PERCENT
+        value: "0"
+      - key: DEFAULT_SESSION_PRICE
+        value: "0"
+      - key: NOTIFICATION_SWEEP_INTERVAL_MS
+        value: "900000"

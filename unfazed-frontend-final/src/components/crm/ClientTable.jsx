@@ -1,0 +1,4 @@
+export default function ClientTable({ clients, renderActions }) {
+  const initials = (name = '') => name.split(' ').map((x) => x[0]).join('').slice(0, 2).toUpperCase();
+  return <table><thead><tr><th>Client</th><th>Status</th><th>Last Session</th><th>Tags</th><th /></tr></thead><tbody>{clients.map((c) => <tr key={c._id}><td><div className="table-client"><div className="client-avatar">{initials(c.name)}</div><div><b>{c.name}</b><span>{c.email}</span></div></div></td><td><em className={c.status === 'active' ? 'status-active' : ''}>{c.status}</em></td><td>{c.lastSession ? `${c.lastSession.date} · ${c.lastSession.startTime}` : 'No session yet'}</td><td>{c.tags?.length ? c.tags.map((t) => <span className="tag" key={t} style={{ marginRight: 4 }}>{t}</span>) : <span className="tag">General</span>}</td><td>{renderActions?.(c)}</td></tr>)}</tbody></table>;
+}

@@ -1,0 +1,23 @@
+[
+  {
+    "key": "free",
+    "name": "Free",
+    "monthlyPrice": 0,
+    "caps": { "activeClients": 10, "analyticsMonths": 1 },
+    "features": { "advancedAnalytics": false, "noteTemplates": false, "packages": false }
+  },
+  {
+    "key": "pro",
+    "name": "Pro",
+    "monthlyPrice": 999,
+    "caps": { "activeClients": 100, "analyticsMonths": 12 },
+    "features": { "advancedAnalytics": true, "noteTemplates": true, "packages": true }
+  },
+  {
+    "key": "practice",
+    "name": "Practice",
+    "monthlyPrice": 1999,
+    "caps": { "activeClients": 500, "analyticsMonths": 24 },
+    "features": { "advancedAnalytics": true, "noteTemplates": true, "packages": true }
+  }
+]
