@@ -1,5 +1,9 @@
 # Unfazed — Major Project Web Development
 
+## Live Demo
+- Frontend: https://unfazed-therapy-app.vercel.app
+- Backend health check: https://unfazed-jbta.onrender.com/api/health
+
 MERN SaaS platform for therapists in India, following the supplied Unlox Major Project PDF.
 
 ## Structure
@@ -10,7 +14,6 @@ unfazed/
 ├── unfazed-frontend/
 ├── render.yaml
 └── PDF-COMPLIANCE-CHECKLIST.md
-```
 
 ## Local setup
 
